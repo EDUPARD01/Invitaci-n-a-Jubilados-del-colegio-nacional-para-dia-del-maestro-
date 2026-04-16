@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación - Día del Maestro</title>
+    <!-- Incluir fuentes elegantes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Un rojo oscuro y elegante */
+            --red-elegant: #a31621; 
+            --black-text: #2a2a2a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* Imagen de fondo utilizando el archivo de la misma carpeta */
+            background-image: url('Fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            
+            /* Centrado del contenido para dispositivos siempre visible e ideal en móviles */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            
+            /* Fuente principal, limpia y neutral, para hacer destacar los títulos serif */
+            font-family: 'Montserrat', sans-serif;
+            color: var(--black-text);
+            padding: 20px;
+        }
+
+        /* Cuadrado blanco transparente con bordes redondeados */
+        .card {
+            background-color: rgba(255, 255, 255, 0.90);
+            
+            /* Efecto difuminado o glassmorphism sutil para realzar sobre el fondo */
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            
+            /* Dimensiones y adaptabilidad móvil */
+            width: 100%;
+            max-width: 420px;
+            padding: 40px 30px;
+            text-align: center;
+            
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Detalle de línea roja sutil bordeando el interior para agregar elegancia */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 12px; left: 12px; right: 12px; bottom: 12px;
+            border: 1px solid rgba(163, 22, 33, 0.2);
+            border-radius: 18px;
+            pointer-events: none;
+        }
+
+        /* Posicionamiento seguro sobre las líneas decorativas (.card::before) */
+        .card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Logo contenedor centrado */
+        .logo-container {
+            margin-bottom: 25px;
+        }
+
+        .logo-container img {
+            max-width: 130px;
+            height: auto;
+            /* Se asume que Logo.png puede tener bordes transparentes. 
+               La clase de por sí lo adaptará al contenedor fluidamente. */
+        }
+
+        /* Títulos e información destacada */
+        h1.evento-titulo {
+            font-family: 'Playfair Display', serif;
+            color: var(--red-elegant);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .texto-intro {
+            font-size: 0.90rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .cena-titulo {
+            font-family: 'Playfair Display', serif;
+            color: var(--red-elegant);
+            font-size: 2.2rem;
+            font-weight: 700;
+            font-style: italic;
+            margin: 25px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        /* Recuadro sutil para datos duros de fecha, lugar y hora */
+        .detalles-container {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-top: 1px solid rgba(163, 22, 33, 0.3);
+            border-bottom: 1px solid rgba(163, 22, 33, 0.3);
+            padding: 20px 10px;
+            margin: 25px 0;
+        }
+
+        .detalle-item {
+            margin: 10px 0;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--black-text);
+        }
+
+        .detalle-item span {
+            color: var(--red-elegant);
+            font-weight: 700;
+            margin-right: 5px;
+            font-variant: small-caps;
+            font-size: 1.15rem;
+        }
+
+        .texto-cierre {
+            font-size: 0.90rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .los-esperamos {
+            font-family: 'Playfair Display', serif;
+            color: var(--red-elegant);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .firma {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #555;
+            margin-top: 15px;
+            border-top: 1px dashed rgba(0,0,0,0.1);
+            padding-top: 15px;
+        }
+
+        .firma strong {
+            display: block;
+            margin-top: 5px;
+            color: var(--black-text);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        
+        <div class="logo-container">
+            <img src="Logo.png" alt="Logo Colegio Nacional Costa Alegre">
+        </div>
+
+        <h1 class="evento-titulo">Día del Maestro</h1>
+
+        <p class="texto-intro">
+            El <strong>Colegio Nacional Costa Alegre</strong> tiene el honor de invitar a sus docentes jubilados a compartir una velada especial denominada:
+        </p>
+
+        <div class="cena-titulo">
+            “La Cena Alegre”
+        </div>
+
+        <p class="texto-intro">
+            En homenaje a su invaluable labor, dedicación y legado en la formación de generaciones.
+        </p>
+
+        <div class="detalles-container">
+            <div class="detalle-item"><span>Fecha:</span> Miércoles 29</div>
+            <div class="detalle-item"><span>Lugar:</span> Quincho San Francisco</div>
+            <div class="detalle-item"><span>Hora:</span> 20:30 hs</div>
+        </div>
+
+        <p class="texto-cierre">
+            Será un encuentro lleno de gratitud, recuerdos y alegría, para celebrar juntos el Día del Maestro.
+        </p>
+
+        <div class="los-esperamos">
+            ¡Los esperamos con mucho cariño!
+        </div>
+
+        <div class="firma">
+            Atentamente, <br>
+            <strong>Dirección y Comunidad Educativa</strong>
+            Colegio Nacional Costa Alegre
+        </div>
+
+    </div>
+
+</body>
+</html>
